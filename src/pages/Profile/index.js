@@ -3,7 +3,7 @@ import {StyleSheet, View} from 'react-native';
 import {Button, Gap, UserProfile} from '../../components';
 import {colors} from '../../utils';
 
-const Profile = () => {
+const Profile = ({navigation}) => {
   return (
     <View style={styles.page}>
       <View style={styles.content}>
@@ -15,7 +15,11 @@ const Profile = () => {
           <Gap height={24} />
           <Button title="Change Password" />
           <Gap height={24} />
-          <Button title="LOGOUT" type="Secondary" />
+          <Button
+            title="LOGOUT"
+            type="Secondary"
+            onPress={() => navigation.replace('Login')}
+          />
         </View>
       </View>
     </View>

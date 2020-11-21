@@ -18,9 +18,15 @@ const UploadPhoto = ({navigation}) => {
           <Text style={styles.number}>0819450356889</Text>
         </View>
         <View>
-          <Button title="Upload and Continue" />
+          <Button
+            title="Upload and Continue"
+            onPress={() => navigation.replace('Login')}
+          />
           <Gap height={30} />
-          <Link title="Skip for now" />
+          <Link
+            title="Skip for now"
+            onPress={() => navigation.replace('Login')}
+          />
         </View>
       </View>
     </View>
