@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {Transaction} from '../../components/macro';
@@ -26,7 +27,7 @@ const Home = ({navigation}) => {
               />
               <MenuItem
                 type="Transfer"
-                label="Transfer"
+                label="Withdraw"
                 onPress={() => navigation.navigate('Transfer')}
               />
             </View>

@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 import React, {useEffect} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Image,StyleSheet, View} from 'react-native';
 import {ILLogo} from '../../assets';
 import {colors} from '../../utils';
 
@@ -11,7 +12,7 @@ const Splash = ({navigation}) => {
   }, []);
   return (
     <View style={styles.page}>
-      <ILLogo />
+     <Image source={ILLogo} style={styles.image} />
     </View>
   );
 };
@@ -25,4 +26,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  image: {marginTop:70},
 });

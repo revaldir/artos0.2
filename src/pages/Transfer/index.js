@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {ILTransfer} from '../../assets';
@@ -8,7 +9,7 @@ const Transfer = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header
-        title="Transfer"
+        title="Withdraw"
         type="dark"
         onPress={() => navigation.goBack()}
       />
@@ -16,13 +17,13 @@ const Transfer = ({navigation}) => {
         <Image source={ILTransfer} style={styles.img} />
       </View>
       <View style={styles.wrapper}>
-        <Input placeholder="Nominal Transfer" />
+        <Input placeholder="Nominal Withdraw" />
         <Gap height={16} />
-        <Input placeholder="Nomor Handphone Penerima" />
+        <Input placeholder="Nomor Rekening" />
         <Gap height={20} />
-        <Text>useEffect here.</Text>
+        
         <Button
-          title="Check"
+          title="Submit"
           onPress={() => navigation.replace('TransferSuccess')}
         />
       </View>
@@ -35,6 +36,6 @@ export default Transfer;
 const styles = StyleSheet.create({
   page: {backgroundColor: colors.white, flex: 1},
   container: {alignItems: 'center'},
-  img: {height: 172, width: 240, marginTop: 36, marginBottom: 20},
+  img: {marginTop: 36, marginBottom: 20},
   wrapper: {paddingHorizontal: 40},
 });
