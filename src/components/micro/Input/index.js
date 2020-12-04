@@ -18,9 +18,9 @@ export default Input;
 
 const styles = StyleSheet.create({
   input: {
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: colors.border,
+    borderRadius: 10,
     padding: 12,
+    borderColor: colors.border,
+    borderWidth: 1,
   },
 });

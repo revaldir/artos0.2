@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {ILTopUpSuccess} from '../../assets';
+import {ILSuccess} from '../../assets';
 import {Button, Gap, TextBox} from '../../components';
 import {colors, fonts} from '../../utils';
 
@@ -9,7 +9,7 @@ const TopUpSuccess = ({navigation}) => {
   return (
     <View style={styles.page}>
       <View style={styles.container}>
-        <Image source={ILTopUpSuccess} style={styles.image} />
+        <Image source={ILSuccess} style={styles.image} />
         <Text style={styles.text}>Top Up Success</Text>
         <Text style={styles.amount}>Rp 50.000</Text>
         <TextBox txtPrim="VA BCA" txtSec="20 Agustus 2020" />
@@ -27,7 +27,7 @@ export default TopUpSuccess;
 const styles = StyleSheet.create({
   page: {backgroundColor: colors.white, flex: 1},
   container: {alignItems: 'center'},
-  image: {marginTop:70},
+  image: {marginTop: 70},
   text: {
     fontSize: 20,
     fontFamily: fonts.primary.normal,

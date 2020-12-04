@@ -1,6 +1,6 @@
 import Header from './Header';
 import BottomNavigator from './BottomNavigator';
 import Transaction from './Transaction';
-import UserProfile from './UserProfile';
+import VehicleCard from './VehicleCard';
 
-export {Header, BottomNavigator, Transaction, UserProfile};
+export {Header, BottomNavigator, Transaction, VehicleCard};

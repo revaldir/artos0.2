@@ -1,49 +1,79 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import {DummyUser} from '../../assets';
 import {Transaction} from '../../components/macro';
-import {Balance, Gap, MenuItem} from '../../components/micro';
+import {Gap, MenuItem} from '../../components/micro';
 import {colors, fonts} from '../../utils';
 
 const Home = ({navigation}) => {
   return (
     <View style={styles.page}>
       <View style={styles.content}>
-        <ScrollView showsVerticalScrollIndicator={false}>
-          <View style={styles.wrapperSection}>
-            <Gap height={30} />
-            <Balance />
-            <Gap height={36} />
-            <View style={styles.wrapperMenu}>
-              <MenuItem
-                type="TopUp"
-                label="Top Up"
-                onPress={() => navigation.navigate('TopUp')}
-              />
-              <MenuItem
-                type="QRPay"
-                label="QR Pay"
-                onPress={() => navigation.navigate('QRScan')}
-              />
-              <MenuItem
-                type="Transfer"
-                label="Withdraw"
-                onPress={() => navigation.navigate('Transfer')}
-              />
-            </View>
-            <Gap height={40} />
-            <Text style={styles.text}>5 Transaksi Terakhir</Text>
-            <Gap height={16} />
+        <View style={styles.container}>
+          <View>
+            <Text style={styles.text}>Saldo Anda:</Text>
+            <Text style={styles.text}>Rp. 650.000</Text>
           </View>
-          <View style={styles.wrapperTrans}>
-            <Transaction />
-            <Transaction />
-            <Transaction />
-            <Transaction />
-            <Transaction />
-            <Gap height={30} />
+          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+            <Image source={DummyUser} style={styles.avatar} />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.wrapperMenu}>
+          <View style={styles.wrapperMenuItem}>
+            <MenuItem
+              type="TopUp"
+              label="Top Up"
+              onPress={() => navigation.navigate('TopUp')}
+            />
           </View>
+          <View style={styles.wrapperMenuItem}>
+            <MenuItem
+              type="QRPay"
+              label="QR Pay"
+              onPress={() => navigation.navigate('ChooseVehicle')}
+            />
+          </View>
+          <View style={styles.wrapperMenuItem}>
+            <MenuItem
+              type="Withdraw"
+              label="Withdraw"
+              onPress={() => navigation.navigate('Withdraw')}
+            />
+          </View>
+        </View>
+        <Gap height={24} />
+        <Text style={styles.subText}>Recent Transactions</Text>
+        <Gap height={16} />
+        <ScrollView style={styles.wrapperTrans}>
+          <Transaction
+            icon="car"
+            clickable
+            desc="Xenia - D 5092 ABS"
+            amount="Rp. 24.000"
+          />
+          <Transaction
+            icon="bike"
+            clickable
+            desc="Vario - BK 2401 KC"
+            amount="Rp. 24.000"
+            onPress={() => navigation.navigate('HistoryDetail')}
+          />
+          <Transaction
+            icon="topup"
+            desc="Top Up"
+            amount="Rp. 24.000"
+            date="21/12/2020"
+          />
         </ScrollView>
+        <Gap height={30} />
       </View>
     </View>
   );
@@ -57,23 +87,41 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
-    backgroundColor: colors.background,
+    backgroundColor: colors.secondary,
     flex: 1,
     borderBottomRightRadius: 20,
     borderBottomLeftRadius: 20,
   },
-  text: {
-    fontSize: 16,
-    fontFamily: fonts.primary[500],
-    color: colors.text.primary,
+  container: {
+    paddingHorizontal: 32,
+    paddingVertical: 40,
+    height: 240,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: colors.primary,
+    borderBottomRightRadius: 80,
+    marginBottom: -50,
   },
+  avatar: {height: 110, width: 110},
+  text: {
+    fontSize: 24,
+    fontFamily: fonts.primary[600],
+    color: colors.white,
+  },
+  subText: {fontFamily: fonts.primary[600], fontSize: 14, marginLeft: 24},
   wrapperSection: {paddingHorizontal: 16},
   wrapperTrans: {paddingHorizontal: 20},
   wrapperMenu: {
-    backgroundColor: colors.secondary,
-    borderRadius: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 32,
+    paddingHorizontal: 20,
+  },
+  wrapperMenuItem: {
+    backgroundColor: colors.white,
+    height: 100,
+    width: 100,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: colors.border,
   },
 });

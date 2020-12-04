@@ -1,6 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {IconQRPay, IconTopUp, IconTransfer} from '../../../assets';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {IconQRPay, IconTopUp, IconWithdraw} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
 const MenuItem = ({type, label, onPress}) => {
@@ -11,8 +11,8 @@ const MenuItem = ({type, label, onPress}) => {
     if (type === 'QRPay') {
       return <IconQRPay />;
     }
-    if (type === 'Transfer') {
-      return <IconTransfer />;
+    if (type === 'Withdraw') {
+      return <IconWithdraw />;
     }
     return <IconTopUp />;
   };
@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
   wrapper: {marginTop: 14, marginBottom: 9, alignItems: 'center'},
   text: {
     fontSize: 12,
-    fontFamily: fonts.primary[500],
-    color: colors.white,
-    marginTop: 4,
+    fontFamily: fonts.primary[700],
+    color: colors.text.primary,
+    marginTop: 5,
   },
 });

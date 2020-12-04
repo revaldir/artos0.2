@@ -3,30 +3,42 @@ import Splash from './Splash';
 import Login from './Login';
 import Register from './Register';
 import Home from './Home';
-import UploadPhoto from './UploadPhoto';
 import History from './History';
 import Profile from './Profile';
 import TopUp from './TopUp';
 import TopUpSuccess from './TopUpSuccess';
 import QRScan from './QRScan';
-import QRConfirm from './QRConfirm';
 import QRSuccess from './QRSuccess';
-import Transfer from './Transfer';
-import TransferSuccess from './TransferSuccess';
+import Withdraw from './Withdraw';
+import WithdrawSuccess from './WithdrawSuccess';
+import Vehicle from './Vehicle';
+import Welcome from './Welcome';
+import EditProfile from './EditProfile';
+import ChooseVehicle from './ChooseVehicle';
+import TransactionDetail from './TransactionDetail';
+import HistoryDetail from './HistoryDetail';
+import AddVehicle from './AddVehicle';
+import EditVehicle from './EditVehicle';
 
 export {
   Splash,
   Login,
   Register,
   Home,
-  UploadPhoto,
   History,
   Profile,
   TopUp,
   TopUpSuccess,
   QRScan,
-  QRConfirm,
   QRSuccess,
-  Transfer,
-  TransferSuccess,
+  Withdraw,
+  WithdrawSuccess,
+  Vehicle,
+  Welcome,
+  EditProfile,
+  ChooseVehicle,
+  TransactionDetail,
+  HistoryDetail,
+  AddVehicle,
+  EditVehicle,
 };

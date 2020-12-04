@@ -15,7 +15,7 @@ const QRScan = ({navigation}) => {
       <Button
         title="Dummy"
         type="Secondary"
-        onPress={() => navigation.replace('QRConfirm')}
+        onPress={() => navigation.replace('TransactionDetail')}
       />
     </View>
   );

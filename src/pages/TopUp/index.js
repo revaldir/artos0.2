@@ -9,14 +9,14 @@ const TopUp = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header title="Top Up" type="dark" onPress={() => navigation.goBack()} />
-      <Gap height={36} />
+      <Gap height={40} />
       <View style={styles.imageWrapper}>
         <Image source={ILTopUp} style={styles.image} />
       </View>
       <Gap height={50} />
       <View style={styles.content}>
         <Input placeholder="Nominal Top Up" />
-        <Gap height={20} />
+        <Gap height={40} />
         <Button
           title="SUBMIT"
           onPress={() => navigation.replace('TopUpSuccess')}

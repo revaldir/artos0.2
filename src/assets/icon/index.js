@@ -1,31 +1,39 @@
-import IconAddPhoto from './ic-add-photo.svg';
-import IconBackDark from './ic-back-dark.svg';
-import IconBackLight from './ic-back-light.svg';
+import IconAdd from './ic-add.svg';
+import IconBack from './ic-back.svg';
+import IconBike from './ic-bike-hist.svg';
+import IconCar from './ic-car-hist.svg';
+import IconEditPhoto from './ic-edit-photo.svg';
 import IconHistory from './ic-history-i.svg';
-import IconHistoryActive from './ic-history-a.svg';
+import IconHistoryActive from './ic-history.svg';
 import IconHome from './ic-home-i.svg';
-import IconHomeActive from './ic-home-a.svg';
-import IconProfile from './ic-profile-i.svg';
-import IconProfileActive from './ic-profile-a.svg';
+import IconHomeActive from './ic-home.svg';
+import IconNext from './ic-next.svg';
 import IconQRPay from './ic-qrpay.svg';
-import IconRemovePhoto from './ic-del-photo.svg';
+import IconQRHistory from './ic-qrpay-hist.svg';
 import IconTopUp from './ic-topup.svg';
-import IconTransaction from './ic-transaction.svg';
-import IconTransfer from './ic-transfer.svg';
+import IconTopUpHistory from './ic-topup-hist.svg';
+import IconVehicle from './ic-vehicle-i.svg';
+import IconVehicleActive from './ic-vehicle.svg';
+import IconWithdraw from './ic-withdraw.svg';
+import IconWithdrawHistory from './ic-withdraw-hist.svg';
 
 export {
-  IconAddPhoto,
-  IconBackDark,
-  IconBackLight,
+  IconAdd,
+  IconBack,
+  IconBike,
+  IconCar,
+  IconEditPhoto,
   IconHistory,
   IconHistoryActive,
   IconHome,
   IconHomeActive,
-  IconProfile,
-  IconProfileActive,
+  IconNext,
   IconQRPay,
-  IconRemovePhoto,
+  IconQRHistory,
   IconTopUp,
-  IconTransaction,
-  IconTransfer,
+  IconTopUpHistory,
+  IconVehicle,
+  IconVehicleActive,
+  IconWithdraw,
+  IconWithdrawHistory,
 };

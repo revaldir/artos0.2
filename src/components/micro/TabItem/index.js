@@ -5,8 +5,8 @@ import {
   IconHistoryActive,
   IconHome,
   IconHomeActive,
-  IconProfile,
-  IconProfileActive,
+  IconVehicle,
+  IconVehicleActive,
 } from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
@@ -18,8 +18,8 @@ const TabItem = ({title, active, onPress, onLongPress}) => {
     if (title === 'History') {
       return active ? <IconHistoryActive /> : <IconHistory />;
     }
-    if (title === 'Profile') {
-      return active ? <IconProfileActive /> : <IconProfile />;
+    if (title === 'Vehicle') {
+      return active ? <IconVehicleActive /> : <IconVehicle />;
     }
     return <IconHome />;
   };
