@@ -22,7 +22,7 @@ const EditProfile = ({navigation}) => {
         <Gap height={12} />
         <ListEditItem desc="Password" />
         <View style={styles.btnWrapper}>
-          <Button title="Update Profile" />
+          <Button title="Update Profile" onPress={() => navigation.goBack('UserProfile')}/>
         </View>
       </ScrollView>
     </View>
